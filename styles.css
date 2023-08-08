@@ -1,0 +1,94 @@
+:root {
+    /* Colors */
+    --top-bun-color: linear-gradient(0deg, #F39F3D 0%, #AC571E 100%);
+    --bottom-bun-color: linear-gradient(0deg, #F39F3D 0%, #AC571E 100%);
+    --tomato-color: #D34A34;
+    --lettuce-color: linear-gradient(0deg, #5BAD5F 0%, #9AC357 100%);
+    --chess-color: linear-gradient(0deg, #D0C54A 0%, #EAD864 100%);
+    --patty-color: linear-gradient(0deg, #6E330F 0%, #5E3D26 100%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+    aspect-ratio: 1 / 0.55;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 400ms ease;
+}
+
+@media only screen and (max-width: 1200px) {
+    .burger {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .burger {
+        width: 90vw;
+    }
+}
+
+.burger:hover {
+    transform: scale(1.03);
+}
+
+.burger:hover .lettuce, .burger:hover .patty {
+    margin: 8px 0;
+}
+
+.bun {
+    width: 85%;
+}
+
+.top-bun {
+    border-radius: 50% 50% 0 0 / 60px 60px 0 0;
+    height: 35%;
+    background: var(--top-bun-color);
+}
+
+.bottom-bun {
+    border-radius: 0 0 35px 35px;
+    height: 25%;
+    background: var(--bottom-bun-color);
+}
+
+.tomato {
+    width: 85%;
+    height: 4%;
+    background: var(--tomato-color);
+}
+
+.lettuce {
+    width: 100%;
+    height: 12%;
+    background: var(--lettuce-color);
+    border-radius: 50px;
+    transition: margin-bottom 200ms ease-in, margin-top 200ms ease-in;
+}
+
+.chess {
+    width: 100%;
+    height: 6%;
+    background: var(--chess-color);
+    border-radius: 50px;
+}
+
+.patty {
+    width: 85%;
+    height: 12%;
+    background: var(--patty-color);
+    border-radius: 50px;
+    transition: margin-bottom 200ms ease-in, margin-top 200ms ease-in;
+}
